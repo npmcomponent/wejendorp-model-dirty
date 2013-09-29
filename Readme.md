@@ -1,8 +1,7 @@
-
 # model-dirty
 
   Plugin to make model send only dirty fields on save/update.
-  Works by replacing `model#toJSON` in the `model#save`
+  Works by replacing `model#toJSON` in `model#save`
 
 ## Installation
 
