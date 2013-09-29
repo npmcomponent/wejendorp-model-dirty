@@ -2,7 +2,7 @@
   "name": "model-dirty",
   "repo": "wejendorp/model-dirty",
   "description": "Plugin to make component/model send only dirty fields on save/update.",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "keywords": ["dirty", "model", "optimize"],
   "dependencies": {},
   "development": {

@@ -36,6 +36,7 @@ describe('model-dirty', function() {
     var dirty = model.dirty;
     model.save(function(err, res) {
       var mirror = JSON.parse(res.text);
+      expect(Object.keys(mirror).length).to.eql(2);
       expect(mirror.id).to.eql(1);
       expect(mirror.test).to.eql('dirty');
       done();
@@ -43,10 +44,11 @@ describe('model-dirty', function() {
   });
   it('should not break toJSON', function(done) {
     model.dirty = {}; // make sure it doesn't read from dirty
-    expect(model.toJSON()).to.eql({id:1, name:'New'});
+    expect(model._toJSON()).to.eql(model.toJSON());
 
     model.save(function(err, res) {
-      expect(model.toJSON()).to.eql(model.attrs);
+      // expect(model).to.eql(this); // fails in phantomJS?
+      expect(this._toJSON()).to.eql(this.toJSON());
       done();
     });
   });

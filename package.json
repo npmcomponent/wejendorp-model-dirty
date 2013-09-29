@@ -1,13 +1,13 @@
 {
   "name": "model-dirty",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Plugin to make model send only dirty fields on save/update.",
   "main": "index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "grunt test"
+    "test": "make test"
   },
   "repository": {
     "type": "git",
@@ -15,10 +15,9 @@
   },
   "author": "Jacob Wejendorp",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "grunt": "~0.4.1",
     "connect": "~2.9.0",
-    "grunt-mocha": "~0.4.1",
-    "grunt-component-build": "~0.4.1"
+    "grunt-mocha": "~0.4.1"
   }
 }

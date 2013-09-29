@@ -3,7 +3,7 @@ test: modules build
 	grunt test
 
 modules: package.json
-	@npm install --dev
+	@npm install
 
 build: components index.js
 	@component build --dev

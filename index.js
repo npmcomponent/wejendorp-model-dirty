@@ -1,19 +1,21 @@
 
+function toJSON() {
+  var fields = this.dirty;
+  fields[this.model.primaryKey] = this.primary();
+  return fields;
+}
+
 module.exports = function(model) {
-  model.prototype._save = model.prototype.save;
+  model.prototype._toJSON = model.prototype.toJSON;
+  model.prototype._save   = model.prototype.save;
 
   model.prototype.save = function(fn) {
     var m = this;
-    m.toJSON = function() {
-      var fields = m.dirty;
-      fields[m.model.primaryKey] = m.primary();
-      return fields;
-    };
 
-    m._save(function() {
-      m.toJSON = function() { return m.attrs; }
+    m.toJSON = toJSON;
+    return m._save(function() {
+      m.toJSON = m._toJSON;
       fn.apply(m, arguments);
     });
-
   };
 };
