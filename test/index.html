@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>Model dirty test</title>
+    <link rel="stylesheet" href="css/mocha.css" type="text/css" charset="utf-8" />
+</head>
+<body>
+    <!-- Required for browser reporter -->
+    <div id="mocha"></div>
+
+    <script src="js/mocha.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
+        mocha.setup('bdd');
+    </script>
+
+    <script src="js/chai.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
+        var expect = chai.expect;
+    </script>
+
+    <script src="build.js" type="text/javascript" charset="utf-8"></script>
+    <script src="test.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
+        mocha.run();
+    </script>
+</body>
+</html>
