@@ -1,23 +1,13 @@
 {
-  "name": "model-dirty",
+  "name": "wejendorp-model-dirty",
+  "description": "Plugin to make component/model send only dirty fields on save/update.",
   "version": "1.0.0",
-  "description": "Plugin to make model send only dirty fields on save/update.",
+  "keywords": [
+    "dirty",
+    "model",
+    "optimize"
+  ],
   "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
-  "scripts": {
-    "test": "make test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "wejendorp/model-dirty"
-  },
-  "author": "Jacob Wejendorp",
-  "license": "MIT",
-  "dependencies": {
-    "grunt": "~0.4.1",
-    "connect": "~2.9.0",
-    "grunt-mocha": "~0.4.1"
-  }
+  "dependencies": {},
+  "license": "MIT"
 }
